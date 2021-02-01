@@ -1,1 +1,1 @@
-# AST-Party-Probe
+Code fort the AST Party Probe a box that uses three line followers to emit a gate signal when activated. 3.5mm Stereo Jacks are used as inputs to connect a line follower to the Anlog In, power, and ground pins. Outputs can also be passively summed via resistors for a total output.
