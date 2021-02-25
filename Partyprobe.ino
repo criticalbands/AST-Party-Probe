@@ -1,9 +1,11 @@
 const int tcrtPin1 = A0; //the tracking module attach to pin 2
 const int out1 = 9;
-const int tcrtPin2 = A2; //the tracking module attach to pin 2
+const int tcrtPin2 = A1; //the tracking module attach to pin 2
 const int out2 = 10;
-const int tcrtPin3 = A3; //the tracking module attach to pin 2
+const int tcrtPin3 = A2; //the tracking module attach to pin 2
 const int out3 = 11;
+const int totalInPin = 5; //the tracking module attach to pin 2
+const int totalout = 6;
 
 void setup()
 {
@@ -13,6 +15,8 @@ void setup()
   pinMode(out2, OUTPUT); //set ledPin as OUTPUT
   pinMode(tcrtPin3, INPUT_PULLUP); // set trackingPin as INPUT
   pinMode(out3, OUTPUT); //set ledPin as OUTPUT
+  pinMode(totalInPin, INPUT); // set trackingPin as INPUT
+  pinMode(totalout, OUTPUT); //set ledPin as OUTPUT
 }
 
 void loop() {
@@ -43,4 +47,13 @@ void loop() {
   {
     digitalWrite(out3, LOW);
   }
+  boolean val4 = digitalRead(totalInPin); // read the value of tcrt5000
+  if (val4 == LOW) //if it is HiGH
+  {
+    digitalWrite(totalout, LOW);
+  }
+  else
+  {
+    digitalWrite(totalout, HIGH);
+}
 }
