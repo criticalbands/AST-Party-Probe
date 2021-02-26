@@ -1,22 +1,25 @@
-const int tcrtPin1 = A0; //the tracking module attach to pin 2
+
+//AST party probe, for use with Line followers, use TRS jack to connect GND, 5v these cna be summed into the totalout via ressitors or a button
+const int tcrtPin1 = 2;
+const int tcrtPin2 = 3;
+const int tcrtPin3 = 4;
+const int totalInPin = 5;
 const int out1 = 9;
-const int tcrtPin2 = A1; //the tracking module attach to pin 2
 const int out2 = 10;
-const int tcrtPin3 = A2; //the tracking module attach to pin 2
 const int out3 = 11;
-const int totalInPin = 5; //the tracking module attach to pin 2
 const int totalout = 6;
 
 void setup()
 {
-  pinMode(tcrtPin1, INPUT_PULLUP); // set trackingPin as INPUT
-  pinMode(out1, OUTPUT); //set ledPin as OUTPUT
-  pinMode(tcrtPin2, INPUT_PULLUP); // set trackingPin as INPUT
-  pinMode(out2, OUTPUT); //set ledPin as OUTPUT
-  pinMode(tcrtPin3, INPUT_PULLUP); // set trackingPin as INPUT
-  pinMode(out3, OUTPUT); //set ledPin as OUTPUT
-  pinMode(totalInPin, INPUT); // set trackingPin as INPUT
-  pinMode(totalout, OUTPUT); //set ledPin as OUTPUT
+  pinMode(tcrtPin1, INPUT_PULLUP);
+  pinMode(tcrtPin2, INPUT_PULLUP);
+  pinMode(tcrtPin3, INPUT_PULLUP);
+  pinMode(totalInPin, INPUT);
+
+  pinMode(out1, OUTPUT);
+  pinMode(out2, OUTPUT);
+  pinMode(out3, OUTPUT);
+  pinMode(totalout, OUTPUT);
 }
 
 void loop() {
@@ -55,5 +58,5 @@ void loop() {
   else
   {
     digitalWrite(totalout, HIGH);
-}
+  }
 }
