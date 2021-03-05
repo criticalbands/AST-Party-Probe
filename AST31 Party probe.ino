@@ -1,5 +1,5 @@
 
-//AST party probe, for use with Line followers, use TRS jack to connect GND, 5v these cna be summed into the totalout via ressitors or a button
+//AST party probe, for use with Line followers, use TRS jack to connect GND, 5v these can be summed into the totalout via resistors or a button
 const int tcrtPin1 = 2;
 const int tcrtPin2 = 3;
 const int tcrtPin3 = 4;
